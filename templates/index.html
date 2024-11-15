@@ -4,51 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PureMint</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>PureMint: Personalized Toothpaste Recommendation</h1>
-    <form method="POST" action="/recommend">
-        <label for="cavity_risk">Cavity Risk:</label>
-        <select id="cavity_risk" name="cavity_risk" required>
-            <option value="Low">Low</option>
-            <option value="Medium">Medium</option>
-            <option value="High">High</option>
-        </select>
-        <br><br>
+    <h1 class="header">PureMint: Personalized Toothpaste Recommendation</h1>
 
-        <label for="sensitivity">Sensitivity Level:</label>
-        <select id="sensitivity" name="sensitivity" required>
-            <option value="Low">Low</option>
-            <option value="Medium">Medium</option>
-            <option value="High">High</option>
-        </select>
-        <br><br>
+    <div class="bento-container">
+        <!-- Left side (Form) -->
+        <div class="form-container">
+            <form method="POST" action="/recommend" class="form">
+                <label for="cavity_risk">Cavity Risk:</label>
+                <select id="cavity_risk" name="cavity_risk" class="input" required>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
 
-        <label for="gum_health">Gum Health:</label>
-        <select id="gum_health" name="gum_health" required>
-            <option value="Good">Good</option>
-            <option value="Moderate">Moderate</option>
-            <option value="Poor">Poor</option>
-        </select>
-        <br><br>
+                <label for="sensitivity">Sensitivity Level:</label>
+                <select id="sensitivity" name="sensitivity" class="input" required>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
 
-        <label for="whitening">Do you want Whitening?</label>
-        <select id="whitening" name="whitening" required>
-            <option value="No">No</option>
-            <option value="Yes">Yes</option>
-        </select>
-        <br><br>
+                <label for="gum_health">Gum Health:</label>
+                <select id="gum_health" name="gum_health" class="input" required>
+                    <option value="Good">Good</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="Poor">Poor</option>
+                </select>
 
-        <button type="submit">Get Recommendation</button>
-    </form>
+                <label for="whitening">Do you want Whitening?</label>
+                <select id="whitening" name="whitening" class="input" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
 
-    {% if ingredients %}
-        <h2>Your Recommended Ingredients:</h2>
-        <ul>
-            {% for ingredient in ingredients %}
-                <li>{{ ingredient }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+                <button type="submit" class="button">Get Recommendation</button>
+            </form>
+        </div>
+
+        <!-- Right side (Ingredients) -->
+        <div class="ingredients-container">
+            {% if ingredients %}
+                <h2 class="result-header">Your Recommended Ingredients:</h2>
+                <ul class="ingredient-list">
+                    {% for ingredient in ingredients %}
+                        <li class="ingredient">{{ ingredient }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,152 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-top: 30px;
+}
+
+.header {
+    font-size: 32px;
+    color: #ffffff; /* White text */
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.bento-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px; /* Space between left and right containers */
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    border-radius: 15px;
+    background-color: #1e1e1e; /* Dark container background */
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+/* Left side (Form) */
+.form-container {
+    width: 40%;
+    background-color: #2a2a2a; /* Slightly lighter dark for contrast */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Dark shadow */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input {
+    background-color: #333333; /* Dark input fields */
+    color: #ffffff; /* White text in inputs */
+    border: 2px solid #555555; /* Dark border */
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #00bfae; /* Teal border on focus */
+    background-color: #444444; /* Slightly lighter input on focus */
+}
+
+.button {
+    padding: 14px;
+    background-color: #00bfae; /* Teal button */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #009e92; /* Darker teal on hover */
+}
+
+.button:active {
+    background-color: #007f6b; /* Even darker teal on click */
+}
+
+/* Right side (Ingredients) */
+.ingredients-container {
+    width: 55%;
+    background-color: #2a2a2a; /* Dark background for ingredient container */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Dark shadow */
+    overflow-y: auto;
+}
+
+.result-header {
+    font-size: 22px;
+    color: #00bfae; /* Teal header */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ingredient-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ingredient {
+    font-size: 16px;
+    padding: 14px;
+    background-color: #333333; /* Dark ingredient backgrounds */
+    margin-bottom: 12px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Dark shadow on ingredient */
+}
+
+.ingredient:hover {
+    background-color: #444444; /* Lighter hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bento-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-container,
+    .ingredients-container {
+        width: 100%;
+    }
+
+    .header {
+        font-size: 26px;
+    }
+
+    .input,
+    .button {
+        font-size: 14px;
+    }
+}
