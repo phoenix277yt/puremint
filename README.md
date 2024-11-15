@@ -13,27 +13,12 @@
 
 ---
 
-## 🖥️ Live Demo
-
-Coming soon!
-
----
-
-## 📸 Screenshots
-
-### Home Page
-A simple and intuitive form where users can input their dental profile.
-
-> _Add screenshots here once the UI is complete._
-
----
-
 ## 🛠️ Technology Stack
 
 - **Backend**: Python (Flask)
-- **Frontend**: HTML5, CSS (optional for styling)
+- **Frontend**: HTML5, CSS
 - **AI Logic**: Python-based recommendation algorithm
-- **Deployment**: Flask development server (can be hosted on platforms like Heroku or AWS)
+- **Deployment**: Flask development server
 
 ---
 
@@ -57,8 +42,8 @@ Follow these steps to set up the project locally:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/PureMint.git
-cd PureMint
+git clone https://github.com/phoenix277yt/puremint.git
+cd puremint
 ```
 ### 2. Install Dependencies
 Ensure Python 3.x and pip are installed, then run:
@@ -84,12 +69,8 @@ http://127.0.0.1:5000/
 - Sensitivity Level: Low, Medium, High
 - Gum Health: Good, Moderate, Poor
 - Whitening Preference: Yes, No
-- Plaque Control: Rarely, Occasionally, Often
-- Breath Freshening Importance: Not Important, Somewhat Important, Very Important
-- Special Conditions: None, Braces, Implants, Other
-- Tartar Control: Yes, No
 - Organic Preference: Yes, No Preference
-- Flavor Preference: Mint, Citrus, Herbal, No Preference
+- Flavor Preference: Mint, Herbal, No Preference
 
 ---
 
@@ -99,28 +80,6 @@ http://127.0.0.1:5000/
 3. A list of recommended ingredients is displayed on the same page.
 
 ---
-
-## 🧠 Future Enhancements
-- Add more advanced AI models for ingredient selection.
-- Build a database to store user profiles and ingredient information.
-- Improve UI/UX with CSS and JavaScript interactivity.
-- Host the project online for public access.
-
----
-
-## 💖 Contributing
-### Contributions are welcome! To contribute:
-
-1. Fork the repository.
-2. Create a feature branch ``git checkout -b feature-name``.
-3. Commit changes ``git commit -m "Description"``.
-4. Push to the branch ``git push origin feature-name``.
-5. Open a pull request.
-
----
-
-### 📜 License
-This project is licensed under the Apache v2 License.
 
 ### ✨ Acknowledgments
 Thanks to Flask for making backend development simple.
