@@ -1,152 +1,265 @@
-/* Global Styles */
-* {
+/* General body style */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: white; /* White text color */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light text color */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    overflow-x: hidden;
-    padding-top: 30px;
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent with blur */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.header {
-    font-size: 32px;
-    color: #ffffff; /* White text */
-    text-align: center;
-    margin-bottom: 30px;
+header h1 {
+    font-size: 2rem;
     font-weight: 600;
+    margin: 0;
 }
 
-.bento-container {
+header nav ul {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1200px;
-    gap: 40px; /* Space between left and right containers */
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Darker shadow */
-    border-radius: 15px;
-    background-color: #1e1e1e; /* Dark container background */
-    margin-top: 40px;
-    overflow: hidden;
-}
-
-/* Left side (Form) */
-.form-container {
-    width: 40%;
-    background-color: #2a2a2a; /* Slightly lighter dark for contrast */
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Dark shadow */
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
     gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.input {
-    background-color: #333333; /* Dark input fields */
-    color: #ffffff; /* White text in inputs */
-    border: 2px solid #555555; /* Dark border */
-    padding: 12px;
-    border-radius: 10px;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-.input:focus {
-    outline: none;
-    border-color: #00bfae; /* Teal border on focus */
-    background-color: #444444; /* Slightly lighter input on focus */
-}
-
-.button {
-    padding: 14px;
-    background-color: #00bfae; /* Teal button */
+header nav a {
     color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
 }
 
-.button:hover {
-    background-color: #009e92; /* Darker teal on hover */
+header nav a:hover {
+    color: #f0f0f0;
 }
 
-.button:active {
-    background-color: #007f6b; /* Even darker teal on click */
-}
-
-/* Right side (Ingredients) */
-.ingredients-container {
-    width: 55%;
-    background-color: #2a2a2a; /* Dark background for ingredient container */
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Dark shadow */
-    overflow-y: auto;
-}
-
-.result-header {
-    font-size: 22px;
-    color: #00bfae; /* Teal header */
+/* Hero Section */
+.hero {
+    background-color: #121212;
+    padding: 80px 20px;
     text-align: center;
+}
+
+/* Glassmorphism Hero Card */
+.hero .glass-card {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero .btn {
+    background-color: #ffffff;
+    color: #121212;
+    border-radius: 25px;
+    padding: 0.8rem 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero .btn:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
 }
 
-.ingredient-list {
-    list-style-type: none;
-    padding: 0;
+/* Form Styling */
+.glass-card .form-label {
+    color: white;
+    font-weight: bold;
 }
 
-.ingredient {
-    font-size: 16px;
-    padding: 14px;
-    background-color: #333333; /* Dark ingredient backgrounds */
-    margin-bottom: 12px;
+input, textarea, select {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
     border-radius: 10px;
-    transition: background-color 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Dark shadow on ingredient */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px;
+    width: 100%;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.ingredient:hover {
-    background-color: #444444; /* Lighter hover effect */
+input:focus, textarea:focus, select:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    outline: none;
 }
+
+button[type="submit"] {
+    background-color: #121212;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 1rem;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #333333;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Navbar (Glass Header) */
+.glass-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    background: linear-gradient(to right, #8fa7af, rgba(0, 0, 0, 0.5));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+}
+
+/* Navigation Links */
+.glass-header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.glass-header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.glass-header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Center Logo Text */
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .glass-header nav ul {
+        gap: 10px;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Combined Glass Header with Gradient */
+.glass-header {
+    position: sticky; /* Keep it at the top */
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    background: linear-gradient(to right, #8fa7af, rgba(0, 0, 0, 0.5)); /* Gradient and transparent black background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional border */
+}
+
+/* Logo Icon Styling */
+.logo-icon {
+    height: 100px; /* icon size */
+    width: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+
+.glass-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.glass-header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.glass-header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.glass-header nav a:hover {
+    text-decoration: underline;
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .bento-container {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header nav ul {
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
     }
 
-    .form-container,
-    .ingredients-container {
-        width: 100%;
+    .hero .glass-card {
+        padding: 1.5rem;
     }
 
-    .header {
-        font-size: 26px;
+    .hero .btn {
+        padding: 0.8rem 2rem;
     }
 
-    .input,
-    .button {
-        font-size: 14px;
+    .glass-card {
+        padding: 1.2rem;
+    }
+
+    input, textarea, select {
+        padding: 10px;
+    }
+
+    button[type="submit"] {
+        padding: 0.8rem;
     }
 }
