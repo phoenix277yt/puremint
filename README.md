@@ -39,6 +39,7 @@ A simple and intuitive form where users can input their dental profile.
 
 ## 📂 Project Structure
 
+``
 PureMint/ 
   ├── app.py 
   ├── templates/ 
@@ -46,7 +47,7 @@ PureMint/
     ├── static/
     ├── README.md
     └── requirements.txt
-
+``
 
 ---
 
