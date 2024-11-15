@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PurelySmile</title>
+</head>
+<body>
+    <h1>PurelySmile: Personalized Toothpaste Recommendation</h1>
+    <form method="POST" action="/recommend">
+        <label for="cavity_risk">Cavity Risk:</label>
+        <select id="cavity_risk" name="cavity_risk" required>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        <br><br>
+
+        <label for="sensitivity">Sensitivity Level:</label>
+        <select id="sensitivity" name="sensitivity" required>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        <br><br>
+
+        <label for="gum_health">Gum Health:</label>
+        <select id="gum_health" name="gum_health" required>
+            <option value="Good">Good</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Poor">Poor</option>
+        </select>
+        <br><br>
+
+        <label for="whitening">Do you want Whitening?</label>
+        <select id="whitening" name="whitening" required>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Get Recommendation</button>
+    </form>
+
+    {% if ingredients %}
+        <h2>Your Recommended Ingredients:</h2>
+        <ul>
+            {% for ingredient in ingredients %}
+                <li>{{ ingredient }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
