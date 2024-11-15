@@ -1,7 +1,7 @@
 /* General body style */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #121212; /* Dark background */
+    background-color: #212529; /* Dark background */
     color: white; /* White text color */
     margin: 0;
     padding: 0;
@@ -48,9 +48,13 @@ header nav a:hover {
 
 /* Hero Section */
 .hero {
-    background-color: #121212;
+    background-image: url(/static/paste.jpg);
     padding: 80px 20px;
     text-align: center;
+}
+
+.note{
+    background-image: url(/static/stall.jpg);
 }
 
 /* Glassmorphism Hero Card */
@@ -140,18 +144,6 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Navbar (Glass Header) */
-.glass-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: blur(10px); /* Blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
-    background: linear-gradient(to right, #8fa7af, rgba(0, 0, 0, 0.5));
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 10px 20px;
-}
 
 /* Navigation Links */
 .glass-header nav ul {
@@ -175,6 +167,7 @@ footer {
     font-size: 1.8rem;
     font-weight: bold;
     letter-spacing: 1px;
+    padding-bottom: 5%;
 }
 
 /* Responsive Adjustments */
@@ -189,6 +182,7 @@ footer {
 }
 
 
+
 /* Combined Glass Header with Gradient */
 .glass-header {
     position: sticky; /* Keep it at the top */
@@ -196,7 +190,8 @@ footer {
     z-index: 100;
     backdrop-filter: blur(10px); /* Blur effect */
     -webkit-backdrop-filter: blur(10px); /* Safari support */
-    background: linear-gradient(to right, #8fa7af, rgba(0, 0, 0, 0.5)); /* Gradient and transparent black background */
+    background: rgb(143,167,175);
+    background: linear-gradient(90deg, rgba(143,167,175,1) 1%, rgba(0,0,0,0.014443277310924318) 33%, rgba(0,0,0,0.014443277310924318) 37%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional border */
 }
@@ -208,6 +203,31 @@ footer {
     display: block;
 }
 
+.demographics {
+    background-color: #212529;
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 20px 80px;
+    color: white;
+  }
+  
+.demographics h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+.demographics ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+.demographics li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  
 
 .glass-header h1 {
     font-size: 2rem;

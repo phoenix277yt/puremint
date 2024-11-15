@@ -1,0 +1,81 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PureMint - Sustainability</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body class="bg-dark text-white">
+    <!-- Navbar -->
+    <header class="glass-header d-flex align-items-center justify-content-between px-4">
+        <div>
+            <!-- PureMint Logo Icon -->
+            <img src="/static/logo-icon.png" class="logo-icon">
+        </div>
+        <nav>
+            <div class="logo-text text-white text-center">
+                <h1 class="mb-0">PureMint</h1>
+            </div>
+            <ul class="list-unstyled d-flex mb-0">
+                <li><a href="/" class="text-white mx-3">Home</a></li>
+                <li><a href="/about" class="text-white mx-3">About</a></li>
+                <li><a href="/contact" class="text-white mx-3">Contact</a></li>
+                <li><a href="/sustainability" class="text-white text-decoration-none mx-3">Sustainability</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sustainability Section -->
+    <section class="container my-5">
+        <div class="glass-card p-5 rounded-3 shadow-lg">
+            <h2 class="text-center mb-4">Our Commitment to Sustainability</h2>
+            <p>
+                At PureMint, we’re redefining oral care with cutting-edge technology and eco-conscious practices. Here’s how we’re leading the way towards a greener future:
+            </p>
+            <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-transparent text-white">
+                    🌱 <h2>AI-Customized Toothpaste:</h2> Each tube is crafted using advanced AI algorithms that analyze your dental health, preferences, and oral care needs. This personalized approach avoids wasteful mass production and ensures every tube is tailored to perfection.
+                </li>
+                <li class="list-group-item bg-transparent text-white">
+                    ♻️ <h2>Eco-Friendly Packaging:</h2> We use classic aluminum tubes, an infinitely recyclable material that minimizes single-use plastic waste. Melt it down, recycle it, and help us close the loop.
+                </li>
+                <li class="list-group-item bg-transparent text-white">
+                    🌍 <h2>Locally Sourced Ingredients:</h2> Our toothpaste formulas are created with ethically and sustainably sourced natural ingredients, supporting local farmers and reducing transportation emissions.
+                </li>
+                <li class="list-group-item bg-transparent text-white">
+                    🏭 <h2>Modular Manufacturing:</h2> Thanks to our unique modular manufacturing system, every toothpaste is made-to-order. This ensures minimal overproduction and eliminates unnecessary storage or transport emissions by producing closer to where you live.
+                </li>
+                <li class="list-group-item bg-transparent text-white">
+                    📦 <h2>Minimalist Packaging Design:</h2> We’ve done away with excessive packaging. Our biodegradable boxes are simple, effective, and kind to the planet.
+                </li>
+                <li class="list-group-item bg-transparent text-white">
+                    🌊 <h2>Ocean-Safe Formula:</h2> No harmful microplastics. Every wash down the drain protects marine life and ecosystems.
+                </li>
+                <li class="list-group-item bg-transparent text-white">
+                    🌟 <h2>Circular Economy Initiatives:</h2> Return your empty aluminum tubes, and we’ll recycle them into new ones. Customers earn loyalty points for participating in our sustainable initiatives.
+                </li>
+            </ul>
+            <br>
+            <p>
+                By combining artificial intelligence, sustainable practices, and locally sourced ingredients, we ensure that PureMint is the smarter, greener choice for oral care. Join us in making oral health personal and sustainable.
+            </p>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="container my-5 text-center">
+        <div class="glass-card p-5 rounded-3 shadow-lg">
+            <h2>Join Our Sustainability Movement</h2>
+            <p>Want to learn more about our eco-friendly practices or participate in our recycling initiative? Reach out today!</p>
+            <a href="/contact" class="btn btn-light rounded-3">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p>By Daksh Shrivastav | For Technasia 5.0 2024</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>

@@ -24,6 +24,7 @@
                 <li><a href="/" class="text-white mx-3">Home</a></li>
                 <li><a href="/about" class="text-white mx-3">About</a></li>
                 <li><a href="/contact" class="text-white mx-3">Contact</a></li>
+                <li><a href="/sustainability" class="text-white text-decoration-none mx-3">Sustainability</a></li>
             </ul>
         </nav>
     </header>
@@ -32,17 +33,54 @@
     <section class="hero text-center py-5">
         <div class="container">
             <div class="glass-card p-5 rounded-3 shadow-lg">
-                <h2>Your Personalized Toothpaste, Delivered</h2>
-                <p>Customized for your dental health, made sustainable.</p>
+                <h2>Your Personalized Toothpaste, delivered to your doorstep...</h2>
+                <p>Customized for your dental health, made sustainable, easy and convenient.</p>
                 <a href="#recommendation" class="btn btn-light rounded-3">Get Started</a>
             </div>
         </div>
     </section>
 
+    <section class="note text-center py-5">
+        <div class="container">
+            <div class="glass-card p-5 rounded-3 shadow-lg">
+                <h2>Refill Stations - Coming Soon</h2>
+                <p>Reduce, reuse, smile! 🌱 PureMint's refill stations, available at select locations, make it easier than ever to cut down on waste while keeping your dental routine fresh. With every refill, you earn eco-credits through our app, tracking your personal impact on the environment. Join us in making a real difference—one refill at a time.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="demographics text-center py-5">
+        <h2>Toothpaste for Every Demographic</h2>
+        <ul>
+          <li>
+            <strong>Kids:</strong> Make brushing fun! PureMint offers exciting flavors like bubblegum and fruity twists, featuring kid-friendly packaging with vibrant characters that make oral care an adventure.
+          </li>
+          <li>
+            <strong>Elderly:</strong> Gentle care for graceful aging. Our specialized formulas cater to denture users and focus on enhancing gum health, offering a comfortable and effective brushing experience.
+          </li>
+          <li>
+            <strong>Vegan:</strong> 100% cruelty-free and plant-based. PureMint’s vegan toothpaste ensures your oral care routine aligns with your values, without compromising on performance.
+          </li>
+          <li>
+            <strong>Athletes:</strong> Stay strong, even in your smile! PureMint's Athlete's Edition is infused with rehydrating salts and remineralizing agents, designed for high-intensity lifestyles.
+          </li>
+        </ul>
+      </section>
+
     <section id="recommendation" class="container my-5">
         <div class="glass-card p-5 rounded-3 shadow-lg">
             <h2 class="text-center mb-4">Find Your Perfect Toothpaste</h2>
             <form method="POST" action="/recommend">
+                <div class="mb-3">
+                    <label for="special" class="form-label">Special Additives</label>
+                    <select class="form-select" id="special" name="special" required>
+                        <option value="kid">Kids (14 and below)</option>
+                        <option value="old">Elderly (60 and above)</option>
+                        <option value="veg">Vegan Ingredients</option>
+                        <option value="sport">Athletic</option>
+                        <option value="none">Regular</option>
+                    </select>
+                </div>
                 <div class="mb-3">
                     <label for="cavity_risk" class="form-label">Cavity Risk</label>
                     <select class="form-select" id="cavity_risk" name="cavity_risk" required>

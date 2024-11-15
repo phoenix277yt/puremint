@@ -14,9 +14,14 @@ def about():
 def contact():
     return render_template("contact.html")
 
+@app.route("/sustainability")
+def sustainability():
+    return render_template("sustainability.html")
+
 @app.route('/recommend', methods=['POST'])
 def recommend():
     # Collecting form data
+    age = request.form['age']
     cavity_risk = request.form['cavity_risk']
     sensitivity = request.form['sensitivity']
     gum_health = request.form['gum_health']
@@ -24,6 +29,16 @@ def recommend():
 
     # Simpler recommendation logic with a smaller list of ingredients
     ingredients = []
+
+    # Special
+    if special == "kid":
+        ingredients.append("Bubblegum Flavour")
+    elif special == "old":
+        ingredients.extend(["Proprietary Gentledent Formula"], ["Chamomile"])
+    elif special == "veg":
+        ingredients.append("Organic Alternatives")
+    elif special == "sport":
+        ingredients.extend(["Remineralization Salt"], ["Rehydration Salt"], ["Probiotics"], ["Mint"]) 
 
     # Cavity Prevention
     if cavity_risk == "High":
