@@ -77,8 +77,8 @@ http://127.0.0.1:5000/
 
 ---
 
-##📋 User Input Form
-####The form collects the following data:
+## 📋 User Input Form
+#### The form collects the following data:
 
 - Cavity Risk: Low, Medium, High
 - Sensitivity Level: Low, Medium, High
