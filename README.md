@@ -22,20 +22,6 @@
 
 ---
 
-## 📂 Project Structure
-
-``
-PureMint/ 
-  ├── app.py 
-  ├── templates/ 
-    │── index.html
-    ├── static/
-    ├── README.md
-    └── requirements.txt
-``
-
----
-
 ## 🛠️ Setup & Installation
 
 Follow these steps to set up the project locally:
